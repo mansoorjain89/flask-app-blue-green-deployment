@@ -5,10 +5,9 @@ pipeline {
                 steps {
                     sh 'make setup'
                     withPythonEnv('/var/lib/jenkins/.website77/bin/python3') {
-                        sh '''pip3 install -r requirements.txt
+                        sh '''make install
                               pip3 -V
                               pip3 freeze
-                              pip3 -V
                             '''
                     }
                 }
