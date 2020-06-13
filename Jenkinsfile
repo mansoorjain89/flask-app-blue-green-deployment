@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pwd' 
+                sh 'apt install make -y'
+		sh 'make install'    
             }
         }
 	stage('Lint') {
