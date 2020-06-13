@@ -8,6 +8,7 @@ pipeline {
                         pip3 -V
                     }
                 }
+            }
             stage('Lint') {
                 steps {
                     sh 'make lint'
