@@ -3,9 +3,9 @@ pipeline {
         stages {
             stage('Build') {
                 steps {
+                    sh 'make setup'
                     withPythonEnv('~/.website8/bin/python') {
-                        make setup
-                        pip -V
+                        sh 'pip -V'
                     }
                 }
             }
