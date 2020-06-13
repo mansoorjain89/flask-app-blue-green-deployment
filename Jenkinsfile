@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'apt install make -y'
 		sh 'make install'    
             }
         }
