@@ -4,9 +4,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		bash 'make setup'
-		sh 'pip3 -V'
-		sh 'make install'
+		bash '''#!/bin/bash
+		 	make setup
+		 	pip3 -V
+		 	make install
+         	'''
             }
         }
 	stage('Lint') {
