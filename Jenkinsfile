@@ -4,10 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		bash '''#!/bin/bash
-		 	make setup
-		 	pip3 -V
-		 	make install
+		sh '''#!/bin/bash
+		      echo "hello world" 
          	'''
             }
         }
