@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
 		sh '''#!/bin/bash
-		      echo "hello world" 
+		      make setup
+		      pip3 -V
          	'''
             }
         }
