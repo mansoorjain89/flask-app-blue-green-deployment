@@ -1,6 +1,7 @@
 setup:
 	# Create python virtualenv & source it
 	python3 -m venv ~/.website7
+	sleep 5
 	. ~/.website7/bin/activate
 
 install:
