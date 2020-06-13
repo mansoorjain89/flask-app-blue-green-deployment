@@ -4,8 +4,8 @@ pipeline {
             stage('Build') {
                 steps {
                     sh 'make setup'
-                    withPythonEnv('/var/lib/jenkins/.website8/bin/python3') {
-                        sh 'pip -V'
+                    withPythonEnv('/var/lib/jenkins/.website77/bin/python3') {
+                        sh 'pip3 -V'
                     }
                 }
             }
