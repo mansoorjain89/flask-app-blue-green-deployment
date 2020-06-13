@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		sh 'make setup'
+		sh 'whoami'
 		sh 'make install' 
             }
         }
