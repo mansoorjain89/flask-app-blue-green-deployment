@@ -1,7 +1,7 @@
 setup:
 	# Create python virtualenv & source it
-	python3 -m venv ~/.website
-	. ~/.website/bin/activate
+	python3 -m venv ~/.website1
+	. ~/.website1/bin/activate
 
 install:
 	# This should be run from inside a virtualenv
