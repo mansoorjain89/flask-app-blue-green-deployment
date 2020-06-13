@@ -4,7 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World Building"' 
+                sh 'make install' 
+            }
+        }
+	stage('Lint') {
+            steps {
+                sh 'make lint'
             }
         }
     }
