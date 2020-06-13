@@ -1,12 +1,12 @@
 setup:
 	# Create python virtualenv & source it
-	sh 'python3 -m venv ~/.website77'
+	bash -c "python3 -m venv ~/.website77"
 	# bash -c "source ~/.website8/bin/activate"
 
 install:
 	# This should be run from inside a virtualenv
-	sh 'pip3 install --upgrade pip &&\
-		 pip3 install -r requirements.txt'
+	sh "pip3 install --upgrade pip &&\
+		 pip3 install -r requirements.txt"
 
 test:
 	# Additional, optional, tests could go here
