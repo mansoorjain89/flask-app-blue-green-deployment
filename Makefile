@@ -1,7 +1,7 @@
 setup:
 	# Create python virtualenv & source it
 	python3 -m venv ~/.flask
-	source ~/.flask/bin/activate
+	. ~/.flask/bin/activate
 
 install:
 	# This should be run from inside a virtualenv
