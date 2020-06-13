@@ -2,7 +2,7 @@ setup:
 	# Create python virtualenv & source it
 	python3 -m venv ~/.website7
 	sleep 5
-	bash -c source ~/.website7/bin/activate
+	bash -c "source ~/.website7/bin/activate"
 
 install:
 	# This should be run from inside a virtualenv
