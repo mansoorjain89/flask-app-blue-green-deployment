@@ -14,7 +14,9 @@ pipeline {
             }
             stage('Lint') {
                 steps {
-                    sh 'make lint'
+                    withPythonEnv('/var/lib/jenkins/.website77/bin/python3') {
+                        sh 'make lint'
+                    }
                 }
             }
         }
