@@ -1,19 +1,17 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Build') {
-            steps {
-		sh '''#!/bin/bash
-		      make setup
-		      pip3 -V
-         	'''
+        stages {
+            stage('Build') {
+                steps {
+                    withPythonEnv('~/.website8/bin/python') {
+                        make setup
+                        pip3 -V
+                    }
+                }
+            stage('Lint') {
+                steps {
+                    sh 'make lint'
+                }
             }
         }
-	stage('Lint') {
-            steps {
-                sh 'make lint'
-            }
-        }
-    }
 }
