@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		sh 'make install'    
+		sh 'make setup'
+		sh 'make install' 
             }
         }
 	stage('Lint') {
