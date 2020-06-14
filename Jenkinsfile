@@ -19,5 +19,10 @@ pipeline {
                     }
                 }
             }
+            stage('Dockerize') {
+                steps {
+                    sh './run_docker.sh'
+                }
+            }
         }
 }
