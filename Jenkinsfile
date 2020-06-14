@@ -21,7 +21,9 @@ pipeline {
             }
             stage('Dockerize') {
                 steps {
-                    sh './run_docker.sh'
+                    sh '''sudo chmod +x run_docker.sh
+                          sudo ./run_docker.sh
+                       '''
                 }
             }
         }
