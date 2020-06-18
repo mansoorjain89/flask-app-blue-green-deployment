@@ -1,0 +1,102 @@
+[
+    {
+        "ParameterKey": "AvailabilityZones",
+        "ParameterValue": "us-east-2a, us-east-2b, us-east-2c"
+    },
+    {
+        "ParameterKey": "VPCCIDR",
+        "ParameterValue": "10.0.0.0/16"
+    },
+    {
+        "ParameterKey": "PrivateSubnet1CIDR",
+        "ParameterValue": "10.0.0.0/19"
+    },
+    {
+        "ParameterKey": "PrivateSubnet2CIDR",
+        "ParameterValue": "10.0.32.0/19"
+    },
+    {
+        "ParameterKey": "PrivateSubnet3CIDR",
+        "ParameterValue": "10.0.64.0/19"
+    },
+    {
+        "ParameterKey": "PublicSubnet1CIDR",
+        "ParameterValue": "10.0.128.0/20"
+    },
+    {
+        "ParameterKey": "PublicSubnet2CIDR",
+        "ParameterValue": "10.0.144.0/20"
+    },
+    {
+        "ParameterKey": "PublicSubnet3CIDR",
+        "ParameterValue": "10.0.160.0/20"
+    },
+    {
+        "ParameterKey": "RemoteAccessCIDR",
+        "ParameterValue": "0.0.0.0/0"
+    },
+    {
+        "ParameterKey": "KeyPairName",
+        "ParameterValue": "udacity_capstone"
+    },
+    {
+        "ParameterKey": "NodeInstanceType",
+        "ParameterValue": "t3.micro"
+    },
+    {
+        "ParameterKey": "NumberOfNodes",
+        "ParameterValue": "1"
+    },
+    {
+        "ParameterKey": "NodeGroupName",
+        "ParameterValue": "Default"
+    },
+    {
+        "ParameterKey": "NodeVolumeSize",
+        "ParameterValue": "10"
+    },
+    {
+        "ParameterKey": "ManagedNodeGroup",
+        "ParameterValue": "no"
+    },
+    {
+        "ParameterKey": "ManagedNodeGroupAMIType",
+        "ParameterValue": "AL2_x86_64"
+    },
+    {
+        "ParameterKey": "KubernetesVersion",
+        "ParameterValue": "1.15"
+    },
+    {
+        "ParameterKey": "ClusterAutoScaler",
+        "ParameterValue": "Disabled"
+    },
+    {
+        "ParameterKey": "EfsStorageClass",
+        "ParameterValue": "Disabled"
+    },
+    {
+        "ParameterKey": "EfsPerformanceMode",
+        "ParameterValue": "generalPurpose"
+    },
+    {
+        "ParameterKey": "EfsThroughputMode",
+        "ParameterValue": "bursting"
+    },
+    {
+        "ParameterKey": "EfsProvisionedThroughputInMibps",
+        "ParameterValue": "0"
+    },
+    {
+        "ParameterKey": "QSS3BucketName",
+        "ParameterValue": "aws-quickstart"
+    },
+    {
+        "ParameterKey": "QSS3KeyPrefix",
+        "ParameterValue": "quickstart-amazon-eks/"
+    },
+    {
+        "ParameterKey": "LambdaZipsBucketName",
+        "ParameterValue": "Optional"
+    }
+]
