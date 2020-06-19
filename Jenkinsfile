@@ -26,5 +26,12 @@ pipeline {
                        '''
                 }
             }
+            stage('Deploy') {
+                steps {
+                    sh '''sudo chmod +x run_kubernetes.sh
+                          sudo ./run_kubernetes.sh
+                       '''
+                }
+            }
         }
 }
