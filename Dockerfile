@@ -2,12 +2,12 @@ FROM ubuntu:18.04
 
 WORKDIR /flask_app
 
-ADD . /flask_app
+COPY . /flask_app
 
 RUN apt-get update && \
-    apt-get install -y make && \
-    apt-get install -y python3 && \
-    apt-get install -y python3-pip && \
+    apt-get install -y make=4.1-9.1ubuntu1 && \
+    apt-get install -y python3=3.6.7-1~18.04 && \
+    apt-get install -y python3-pip=9.0.1-2.3~ubuntu1.18.04.1 && \
     apt-get clean
 
 RUN make install
