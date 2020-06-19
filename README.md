@@ -22,17 +22,37 @@ The EKS clusters are launched in new VPC.
 
 # File Summary:
 
-3. `Dockerfile`: File to dockerize the app.py application
-4. `Makefile`: Make file to create shortcuts to run commands
-5. `app.py`: File where the app code is written
-
-7. `requirements.txt`: Dependent pkgs to be installed on docker containers
-8. `run_docker.sh`: Script with docker commands to create docker image
-
-
-11. `sample_outputs`: Model expected outputs
+1. `Dockerfile`: File to dockerize the app.py application
+2. `Makefile`: Make file to create shortcuts to run commands
+3. `Jenkinsfile`: To define various stages and steps on jenkins pipeline
+4. `app.py`: File where the app code is written
+5. `requirements.txt`: Dependent pkgs to be installed on docker containers
+6. `run_docker.sh`: Script with docker commands to create docker image
+7. `cf_eks.yaml`: CloudFormation script to create EKS clusters in new VPC
+8. `cf_eks_parameters.json`: CloudFormation script parameters to create EKS clusters in new VPC
+9. `create.sh` & `update.sh`: Little bash script to run cloudformation script
+10. `kube_deployment_blue.yaml`: Kube deployment script for blue version of app
+11. `kube_deployment_green.yaml`: Kube deployment script for green version of app
+12. `kube_service.yaml`: Kube deployment script to create and expose service
 
 # Sample Output
 
+$ kubectl get deployment
+NAME              READY   UP-TO-DATE   AVAILABLE   AGE
+flask-app-blue    1/1     1            1           176m
+flask-app-green   1/1     1            1           120m
 
+$ kubectl get pods
+NAME                               READY   STATUS    RESTARTS   AGE
+flask-app-blue-6b447d5f8b-j49gp    1/1     Running   0          174m
+flask-app-green-7bcc6c55c7-nkfv6   1/1     Running   0          118m
 
+$ kubectl get service
+NAME              TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)          AGE
+flask-app-blue    LoadBalancer   172.20.17.132   ad814765ceea144d999bf5b5ab43c65e-1955595653.us-east-2.elb.amazonaws.com   5000:32063/TCP   132m
+flask-app-green   LoadBalancer   172.20.98.104   ae460b8f7a48143e4a918ba87fed96aa-1434308515.us-east-2.elb.amazonaws.com   5000:32111/TCP   117m
+kubernetes        ClusterIP      172.20.0.1      <none>                                                                    443/TCP          8h
+  
+$ curl http://ae460b8f7a48143e4a918ba87fed96aa-1434308515.us-east-2.elb.amazonaws.com:5000
+Hello, World!, This is my Cloud Operations learning pipeline !!  
+  
