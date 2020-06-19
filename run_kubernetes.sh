@@ -6,4 +6,6 @@ kubectl apply -f ./kube_deployment_green.yaml
 
 kubectl expose deployment flask-app-green --type=LoadBalancer --name=flask-app-green
 
+sleep 15
+
 kubectl get service
