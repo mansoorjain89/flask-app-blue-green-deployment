@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-blue
+  labels:
+    app: flask-app-blue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-app-blue
+  template:
+    metadata:
+      labels:
+        app: flask-app-blue
+    spec:
+      containers:
+      - name: flask-app-blue
+        image: 905005439868.dkr.ecr.us-east-2.amazonaws.com/flask-app-ecr:v1
+        ports:
+        - containerPort: 5000
+

@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-app
+  name: flask-app-green
   labels:
-    app: flask-app
+    app: flask-app-green
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask-app
+      app: flask-app-green
   template:
     metadata:
       labels:
-        app: flask-app
+        app: flask-app-green
     spec:
       containers:
-      - name: flask-app
-        image: mansoorjain89/flask-app-deployment:v2
+      - name: flask-app-green
+        image: 905005439868.dkr.ecr.us-east-2.amazonaws.com/flask-app-ecr:v2
         ports:
         - containerPort: 5000
 
