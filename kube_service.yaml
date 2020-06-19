@@ -1,3 +1,4 @@
 #!/bin/bash
 
-kubectl expose deployment flask-app-blue --type=LoadBalancer --name=flask-app-blue
+# kubectl expose deployment flask-app-blue --type=LoadBalancer --name=flask-app-blue
+kubectl expose deployment flask-app-green --type=LoadBalancer --name=flask-app-green
